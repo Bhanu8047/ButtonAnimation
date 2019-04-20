@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Archivo-Regular';
+    font-style: normal;
+    src: local('Archivo'), local('Archivo-Regular'), url('../fonts/Archivo-Regular.ttf') format('ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Archivo', sans-serif;
+    font-size: 16pt;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+h1{
+    margin: 24px 24px;
+    padding: 12px 12px;
+    color: rgba(35, 35, 35, 0.84);
+}
+.animate{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 3px groove #6982626b;
+    height: 60px;
+    width: 160px;
+    box-shadow: 0 4px 40px rgba(1,25,15,0.4);
+    border-radius: 60px;
+    transition: animation 0.5s cubic-bezier(.17,.67,.83,.67);
+    animation: hover 0.5s;
+    transform: translate(-50%,-50%);
+}
+.animateOn{
+    background-color: #8BC34A;
+}
+.animateOff{
+    background-color: #F44336;
+}
+.animate:hover{
+    box-shadow: none;
+
+}
+@keyframes hover {
+    0%{box-shadow: 0 4px 40px rgba(1,25,15,0.4);}
+    100%{box-shadow: none;}
+}
+.circle{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background: #ffffffe6;
+    text-align: center;
+    line-height: 60px;
+    font-size: 12pt;
+    color: rgba(35, 35, 35, 0.84);
+    text-decoration: none;
+    cursor: pointer;
+}
+.turnedOn{
+    transition: all 0.8s cubic-bezier(0,0,.58,1);
+    transform: translateX(100px) scale(0.9,0.9);
+}
+.turnedOff{
+    transition: all 0.8s cubic-bezier(0,0,.58,1);
+    transform: translateX(0) scale(0.8,0.8);
+}
